@@ -1,0 +1,21 @@
+.btn-primary{
+    background-color: #363a2b;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 2rem;
+    font-family: "karla regular";
+}
+
+.btn-carousel {
+    background-color: #4f6234;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    font-family: "karla regular";
+}

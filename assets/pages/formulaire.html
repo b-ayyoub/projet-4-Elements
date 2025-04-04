@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Hôtel 4 Eléments</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/header/header.css">
+    <link rel="icon" href="/hotel.png" type="image/x-icon"> <!-- Favicon au format ICO -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/assets/images/logo-header.png" alt="Logo représentant les 4 éléments de l'hôtel">
+                </a>
+                <ul class="menu">
+                    <li><a href="#" title="Explorez notre hôtel sur l'élément feu">Feu</a><span class="line"></span></li>
+                    <li><a href="#" title="Explorez notre hôtel sur l'élément Air">Air</a></li>
+                    <li><a href="#" title="Séjournez dans notre hôtel sur l'élément Terre">Terre</a></li>
+                    <li><a href="#" title="Profitez de notre hôtel sur l'élément Eau">Eau</a></li> 
+                </ul>
+            </div>
+            <!-- Bouton burger -->
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-right">
+                <span class="contact-text">Contact</span>
+                <a href="https://www.instagram.com/" class="contact" target="_blank">
+                    <img src="/assets/images/icon/instagram.svg" alt="Instagram">
+                </a>                
+                <a href="https://www.facebook.com/" class="contact" target="_blank">
+                    <img src="/assets/images/icon/facebook.svg" alt="Facebook" class="insta">
+                </a>                
+                <a href="/assets/pages/formulaire.html" class="btn-header" title="Accédez à la page de réservation pour un séjour inoubliable">Réserver</a>
+                <a href="#" class="login" title="Connectez-vous pour accéder à votre espace personnel">Se connecter</a>
+                <button id="theme-toggle" aria-label="Activer le mode nuit"></button>
+            </div>
+        </nav>
+    </header>
+    <div class="container-reservation">
+        <h1>Réservation - Hôtel Feu</h1>
+        <form id="reservationForm">
+            <!-- Section Informations Personnelles -->
+            <fieldset>
+                <legend>Informations Personnelles</legend>
+                
+                <div class="form-group">
+                    <label for="lastName">Nom*</label>
+                    <input type="text" id="lastName" name="lastName" required minlength="2" maxlength="50">
+                    <span class="error-message" id="lastNameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="firstName">Prénom*</label>
+                    <input type="text" id="firstName" name="firstName" required minlength="2" maxlength="50">
+                    <span class="error-message" id="firstNameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="streetNumber">Numéro de rue*</label>
+                    <input type="number" id="streetNumber" name="streetNumber" required>
+                    <span class="error-message" id="streetNumberError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="streetName">Nom de la rue*</label>
+                    <input type="text" id="streetName" name="streetName" required maxlength="150">
+                    <span class="error-message" id="streetNameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="postalCode">Code postal*</label>
+                    <input type="text" id="postalCode" name="postalCode" required pattern="[0-9]{5}">
+                    <span class="error-message" id="postalCodeError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">Ville*</label>
+                    <input type="text" id="city" name="city" required maxlength="100">
+                    <span class="error-message" id="cityError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required maxlength="100">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Téléphone*</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}|[0-9 \-/]{14}">
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+            </fieldset>
+            
+            <!-- Section Réservation -->
+            <fieldset>
+                <legend>Détails de la Réservation</legend>
+                
+                <div class="form-group">
+                    <label for="hotel">Hôtel*</label>
+                    <select id="hotel" name="hotel" required>
+                        <option value="">-- Sélectionnez un hôtel --</option>
+                        <option value="igloo">Igloo (500€/nuit)</option>
+                        <option value="suite">Suite grotte (850€/nuit)</option>
+                    </select>
+                    <span class="error-message" id="hotelError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Nombre de personnes*</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="1">1 personne</option>
+                        <option value="2">2 personnes</option>
+                        <option value="2">3 personnes</option>
+                        <option value="2">4 personnes</option>
+                        <option value="2">5 personnes</option>
+                        <option value="2">6 personnes</option>
+                    </select>
+                    <span class="error-message" id="guestsError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="arrivalDate">Date d'arrivée*</label>
+                    <input type="date" id="arrivalDate" name="arrivalDate" required>
+                    <span class="error-message" id="arrivalDateError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="departureDate">Date de départ*</label>
+                    <input type="date" id="departureDate" name="departureDate" required>
+                    <span class="error-message" id="departureDateError"></span>
+                </div>
+            </fieldset>
+            
+            <!-- Section Options -->
+            <fieldset>
+                <legend>Options et Services Supplémentaires</legend>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="driver" name="driver" value="11">
+                    <label for="driver">Chauffeur (11€/jour)</label>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="breakfast" name="breakfast" value="15">
+                    <label for="breakfast">Petit déjeuner (15€/personne/jour)</label>
+                    
+                    <div id="breakfastOptions" class="options-container" style="display: none;">
+                        <div class="form-group">
+                            <label for="breakfastDiet">Régime alimentaire</label>
+                            <select id="breakfastDiet" name="breakfastDiet">
+                                <option value="none">Non</option>
+                                <option value="vegetarian">Végétarien</option>
+                                <option value="vegan">Végan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Restrictions alimentaires</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="breakfastGluten" name="breakfastGluten" value="gluten">
+                                <label for="breakfastGluten">Sans gluten</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="breakfastLactose" name="breakfastLactose" value="lactose">
+                                <label for="breakfastLactose">Sans lactose</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="breakfastAllergies">Autres allergies/intolérances</label>
+                                <input type="text" id="breakfastAllergies" name="breakfastAllergies">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="meal" name="meal" value="25">
+                    <label for="meal">Repas (25€/personne/repas)</label>
+                    
+                    <div id="mealOptions" class="options-container" style="display: none;">
+                        <div class="form-group">
+                            <label for="mealType">Type de repas</label>
+                            <select id="mealType" name="mealType">
+                                <option value="midi">Midi</option>
+                                <option value="soir">Soir</option>
+                                <option value="ponctuel">Ponctuel (payé sur place)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mealDiet">Régime alimentaire</label>
+                            <select id="mealDiet" name="mealDiet">
+                                <option value="none">Non</option>
+                                <option value="vegetarian">Végétarien</option>
+                                <option value="vegan">Végan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Restrictions alimentaires</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="mealGluten" name="mealGluten" value="gluten">
+                                <label for="mealGluten">Sans gluten</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="mealLactose" name="mealLactose" value="lactose">
+                                <label for="mealLactose">Sans lactose</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="mealAllergies">Autres allergies/intolérances</label>
+                                <input type="text" id="mealAllergies" name="mealAllergies">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="tour" name="tour" value="20">
+                    <label for="tour">Visite guidée du domaine (20€)</label>
+                </div>
+            </fieldset>
+            
+            <button type="submit" class="submit-btn">Valider la réservation</button>
+        </form>
+    </div>
+    
+    <!-- Modal de confirmation -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirmation de réservation</h2>
+            <div id="confirmationDetails"></div>
+            <div id="invoiceDetails"></div>
+            <div class="modal-buttons">
+                <button id="cancelBtn" class="btn secondary">Annuler</button>
+                <button id="payBtn" class="btn primary">Procéder au paiement</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôtel des 4 Eléments page Feu</title>
+    <link rel="icon" href="hotel.png" type="image/x-icon"> <!-- Favicon au format ICO -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/header/header.css">
+    <link rel="stylesheet" href="assets/footer/footer.css">
+    <link rel="stylesheet" href="assets/components/title.css">
+    <link rel="stylesheet" href="assets/components/button/primary-button.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo desktop-nav">
+                <a href="index.html">
+                    <img src="assets/images/logo-header.png" alt="Logo représentant les 4 éléments de l'hôtel">
+                </a>
+                <ul class="menu">
+                    <li><a href="assets/pages/hotel-feu.html" title="Découvrez notre hôtel en feu">Feu</a></li>
+                    <li><a href="#" title="Explorez notre hôtel sur l'élément Air">Air</a></li>
+                    <li><a href="#" title="Séjournez dans notre hôtel sur l'élément Terre">Terre</a></li>
+                    <li><a href="#" title="Profitez de notre hôtel sur l'élément Eau">Eau</a></li>                    
+                </ul>
+            </div>
+            <!-- Bouton burger -->
+            <div class="mobile-nav">
+                <!-- Bouton burger -->
+                <div class="burger">
+                    <img src="/assets/images/icon/list.svg" alt="Menu">
+                </div>
+                
+                <!-- Réseaux sociaux -->
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/" class="contact" target="_blank">
+                        <img src="assets/images/icon/instagram.svg" alt="Instagram">
+                    </a>                
+                    <a href="https://www.facebook.com/" class="contact" target="_blank">
+                        <img src="assets/images/icon/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <span class="contact-text">Contact</span>
+                <a href="https://www.instagram.com/" class="contact" target="_blank">
+                    <img src="assets/images/icon/instagram.svg" alt="Instagram">
+                </a>                
+                <a href="https://www.facebook.com/" class="contact" target="_blank">
+                    <img src="assets/images/icon/facebook.svg" alt="Facebook" class="insta">
+                </a>                
+                <a href="/assets/pages/formulaire.html" class="btn-header">Réserver</a>
+                <a href="#" class="login">Se connecter</a>
+                <button id="theme-toggle" aria-label="Activer le mode nuit">
+                    dark
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <!-- Bannière avec vidéo de fond -->
+                <div class="banner">
+                    <video src="assets/images/home.mp4" autoplay muted loop controls></video>
+                    <div class="banner-caption">
+                        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reservation">
+            <div class="search-box">
+                <h4>Rechercher une disponibilité</h4>
+                <form>
+                    <div class="form-container">
+                        <div class="form-group">
+                            <label for="hotel">Choisir un hôtel</label>
+                            <select id="hotel">
+                                <option>Hôtel terre</option>
+                                <option>Hôtel mer</option>
+                                <option>Hôtel ciel</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="persons">Nbr de personnes</label>
+                            <input type="number" id="persons" value="2" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="arrival">Choisir une date d’arrivée</label>
+                            <input type="date" id="arrival" value="2024-02-11">
+                        </div>
+                    </div>
+                    <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
+                    <button type="button" class="reserve btn-primary" onclick="window.location.href='/assets/pages/formulaire.html'">Chercher</button>
+                </form>
+            </div>  
+        </section>
+        <section class="hotel-element">
+            <!-- Hôtel Feu -->
+            <article class="hotel">
+                <div class="text">
+                    <div class="primary-section">
+                        <h2>Hôtel Feu</h2>
+                        <div class="fin">
+                            <p>
+                                <img src="assets/images/icon/map-pin.svg" alt="Icône de localisation sur une carte">Finlande
+                            </p>
+                            <div class="star">
+                                <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                                <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                                <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                                <img src="assets/images/icon/star-empty.svg" alt="Étoile pleine représentant la note maximale">
+                                (325 avis)
+                            </div>
+                        </div>
+                        <p>L'hôtel Feu ne se situe bien sûr pas sur un volcan, mais en Finlande. Feu de laterre volcanique crachant non loin de là ses geysers, feu des volcans à l'horizon et, bien entendu, feu des aurores boréales que vous pourrez admirer tous les soirs par le toit vitré de votre chambre.</p>
+                        <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
+                        <button type="button" class="btn-primary" onclick="window.location.href='/assets/pages/formulaire.html'">Reserver</button>
+                    </div>
+                </div>
+                <div class="images-igloo">
+                    <img src="assets/images/igloo-forêt.jpg" alt="Igloo dans une forêt enneigée" class="image-hotel " onclick="openLightbox(this)">
+                    <img src="assets/images/igloo-ciel-vert.jpg" alt="Igloo sous un ciel vert aurora borealis" class="image-hotel imgciel" onclick="openLightbox(this)">
+                </div>
+            </article>
+            <!-- Hôtel Air -->
+            <article class="hotel">
+                <!-- Conteneur regroupant les images -->
+                <div class="images">
+                     <!-- Lorsque l’utilisateur clique sur l’image, une fonction JavaScript openLightbox(this) s’exécute, probablement pour afficher l’image en plein écran (lightbox). -->
+                    <img src="assets/images/pont-jungle.jpg" alt="Pont suspendu dans la jungle" class="image-hotel imgciel" onclick="openLightbox(this)">
+                     <!-- Lorsque l’utilisateur clique sur l’image, une fonction JavaScript openLightbox(this) s’exécute, probablement pour afficher l’image en plein écran (lightbox).e -->
+                    <img src="assets/images/hotel-vert.jpg" alt="Vue d'un hôtel écologique entouré de verdure" class="image-hotel" onclick="openLightbox(this)">
+                </div>
+                <div class="text">
+                    <h2>Hôtel Air</h2>
+                    <div class="fin">
+                        <p> 
+                            <img src="assets/images/icon/map-pin.svg" alt="Icône de localisation sur une carte">Brésil
+                        </p>
+                        <div class="star">
+                            <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                            <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                            <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                            <img src="assets/images/icon/star-empty.svg" alt="Étoile pleine représentant la note maximale">
+                            (325 avis)
+                        </div>
+                    </div>
+                    <p>L'hôtel Air se situe à la frontière du Brésil et du Pérou. C'est un concept architectural innovant qui a permis une implantation à la cîme de la forêt pour offrir un panorama vertigineux et cotoyerchaque matin, de votre chambre (avec ou sans piscine), les oiseaux à votre réveil.</p>
+                    <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
+                    <button type="button" class="btn-primary" onclick="window.location.href='/assets/pages/formulaire.html'">Reserver</button>
+                </div>
+            </article>
+            <!-- Hôtel terre -->
+            <article class="hotel">
+                <div class="text">
+                    <div class="primary-section">
+                        <h2>Hôtel Terre</h2>
+                        <div class="fin">
+                            <p>
+                                <img src="assets/images/icon/map-pin.svg" alt="Icône de localisation sur une carte">Thailande
+                            </p>
+                            <div class="star">
+                                <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                                <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                                <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                                <img src="assets/images/icon/star-empty.svg" alt="Étoile pleine représentant la note maximale">
+                                (325 avis)
+                            </div>
+                        </div>
+                        <p>L'hôtel Terre est situé dans des grottes naturelles en Thaïlande. Retaillées et aménagées avec beaucoup de soin, les chambres de l'hôtel vous offriront soit la fraîcheur et l'apaisement à près de vingt mètres de profondeur, soit un hâvre de paix ouvrant sur l'horizon de la mer au loin.</p>
+                        <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
+                        <button type="button" class="btn-primary" onclick="window.location.href='/assets/pages/formulaire.html'">Reserver</button>
+                    </div>
+                </div>
+                <!-- Conteneur pour les images des expériences dans une grotte -->
+                <div class="images-igloo">
+                      <!-- Lorsque l’utilisateur clique sur l’image, une fonction JavaScript openLightbox(this) s’exécute, probablement pour afficher l’image en plein écran (lightbox).-->
+                    <img src="assets/images/chambre-grotte.jpg" class="image-hotel" alt="Chambre d'hôtel aménagée dans une grotte naturelle" onclick="openLightbox(this)">
+                    <!-- Lorsque l’utilisateur clique sur l’image, une fonction JavaScript openLightbox(this) s’exécute, probablement pour afficher l’image en plein écran (lightbox). -->
+                    <img src="assets/images/diner-grotte.jpg" class="image-hotel imgciel" alt="Dîner romantique dans une grotte avec éclairage tamisé" onclick="openLightbox(this)">
+                </div>
+            </article>
+            <!-- Hôtel Eau -->
+            <article class="hotel">
+                <!-- Conteneur pour afficher plusieurs images -->
+                <div class="images">
+                    <!-- Lorsque l’utilisateur clique sur l’image, une fonction JavaScript openLightbox(this) s’exécute, probablement pour afficher l’image en plein écran (lightbox). -->
+                    <img src="assets/images/plonger-soumarine.jpg" class="image-hotel imgciel" alt="Plongée sous-marine dans un cadre magnifique" onclick="openLightbox(this)">
+                    <!-- Lorsque l’utilisateur clique sur l’image, une fonction JavaScript openLightbox(this) s’exécute, probablement pour afficher l’image en plein écran (lightbox). -->
+                    <img src="assets/images/chambre-aquarium.jpg" class="image-hotel" alt="Chambre d'hôtel avec vue sur un aquarium géant" onclick="openLightbox(this)">                    
+                </div>
+                <div class="text">
+                    <h2>Hôtel Eau</h2>
+                    <div class="fin">
+                        <p>
+                            <img src="assets/images/icon/map-pin.svg" alt="Icône de localisation sur une carte">Île du pacifique
+                        </p>
+                        <div class="star">
+                            <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                            <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                            <img src="assets/images/icon/star-full.svg" alt="Étoile pleine représentant la note maximale">
+                            <img src="assets/images/icon/star-empty.svg" alt="Étoile pleine représentant la note maximale">
+                            (325 avis)
+                        </div>
+                    </div>
+                    <p>L'hôtel Eau est situé sur une île de 2 kilomètres carrés très exactement équidistante de Vladivostok et de Los Angeles. C'est le milieu duPacifique. Vous y disposerez de votre plage, de votre bateau et de votre majordome privés. Votre chambre est un caisson immergé à deux mètres sous l'eau.</p>
+                    <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
+                    <button type="button" class="btn-primary" onclick="window.location.href='/assets/pages/formulaire.html'">Reserver</button>
+                </div>
+            </article>
+           <!-- Lightbox : Conteneur pour afficher une image en plein écran lorsqu'un utilisateur clique sur une image -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <!-- Image qui sera affichée en mode plein écran -->
+                <img id="lightbox-img" alt="Image en mode plein écran">
+            </div>
+        </section>
+        <section class="conception">
+            <div class="container-concept">
+                <article class="concept">
+                    <h3>Le concept</h3>
+                    <img src="assets/images/cabane-bois.jpg" alt="Cabane en bois, représentant le concept unique de l'hôtel">
+                    <p>Depuis l'ouverture de ses 4 hôtels en 2012, 4 Éléments s'est démarqué en proposant des établissements exceptionnels dans des lieux uniques, symbolisant les quatre éléments : terre, eau, air et feu. Ces hôtels insolites, construits dans des endroits inattendus à travers la planète, incarnent notre volonté de révolutionner le tourisme en intégrant luxe, aventure et vision à long terme. Chacun de nos établissements offre un environnement et un service uniques, alliant la rigueur de l'hôtellerie de luxe à une proximité quotidienne avec les habitants. Explorez les environs avec des guides experts tels que des ethnologues, astrophysiciens, géologues et climatologues. Ce que nous vous proposons n'est pas un simple "tour", mais une véritable révolution.
+                    </p>
+                </article>
+                <article class="architecture">
+                    <h3>L’architecture</h3>
+                    <p>L'architecture innovante constitue une étape supplémentaire vers l'exploration de l'Espace, représentant l'extension de notre civilisation vers ses aspects les plus avancés. S'immerger dans l'un de nos hôtels, c'est embrasser une expérience sensorielle où l'on peut se ressourcer au contact des matières représentatives des quatre éléments. C'est une opportunité de se découvrir en harmonie avec la terre, l'air, l'eau et le feu. Notre approche unique vise à transcender les frontières traditionnelles du voyage en offrant une expérience qui éveille les sens et connecte les visiteurs à la quintessence de chaque élément. En plongeant dans nos établissements, les clients sont invités à explorer l'intersection fascinante entre l'innovation architecturale etla nature environnante.</p>
+                    <img src="assets/images/façade-hotel.jpg" alt="Façade de l'hôtel avec une architecture élégante"> 
+                </article>
+                <article class="createur">
+                    <div class="title-createur">
+                        <h3>Le mot du créateur</h3>
+                        <img src="assets/images/icon/cote.png" alt="Icône représentant une double cote"> 
+                        <p>L'architecture innovante représente une avancée vers l'exploration de l'Espace, symbolisant l'extension de notre civilisation vers ses plus grandes aspirations. S'immerger dans nos hôtels, c'est vivre une expérience sensorielle, se ressourcer au contact des matières des quatre éléments. C'est une découverte en harmonie avec la terre, l'air, l'eau et le feu, où chaque détail architectural offre une connexion profonde avec ces éléments fondamentaux. Les témoignages de nos visiteurs soulignent l'impact transformateur de cette expérience immersive, décrivant une reconnexion unique avec la nature et une redécouverte de soi au sein de cet environnement exceptionnel. Cette approche révolutionnaire redéfinit les attentes du voyage,offrant non seulement un hébergement luxueux, mais une véritable aventure sensorielle qui transcende les limites conventionnelles du tourisme.</p>
+                        <div class="trinh">
+                            <span>Trinh Xuan Thuan</span>
+                            <p>Co-fondateur de 4 Éléments</p>
+                        </div>
+                    </div>
+                    <img src="assets/images/responsable-hotel.png" alt="Portrait du responsable de l'hôtel" class="portrait">
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <a href="index.html">
+                <img src="assets/images/logo-header.png" alt="4 Éléments">
+            </a>            
+            <p>N’attendez plus pour vivre l’expérience 4 éléments le temps d’une nuit.</p>
+            <div class="sociaux">
+                <a href="#" title="Suivez-nous sur Instagram">
+                    <img src="assets/images/icon/instagram.svg" alt="Icône Instagram - Suivez-nous sur Instagram">
+                </a>
+                <a href="#" title="Suivez-nous sur Facebook">
+                    <img src="assets/images/icon/facebook.svg" alt="Icône Facebook - Suivez-nous sur Facebook">
+                </a>
+            </div>            
+        </div>
+        <div class="footer-center">
+            <h3>Contact</h3>
+            <p><span>Adresse :</span> 8 avenue exemple</p>
+            <p><span>Ouverture :</span> Tous les jours de 9h à 20h30</p>
+            <p><span>Tél :</span> 33 08 280 28002</p>
+            <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
+            <button type="button" class="btn-primary" onclick="window.location.href='/assets/pages/formulaire.html'">Reserver en ligne</button>
+        </div>
+        <div class="footer-right">
+            <a href="#" title="Consulter les mentions légales de notre site">Mentions légales</a>
+            <a href="#" title="Voir les crédits associés à notre site">Crédits</a>
+            <a href="#" title="Lire les conditions générales de vente">CGV</a>
+            <a href="#" title="Consulter notre politique de confidentialité">Confidentialité</a>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
