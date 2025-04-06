@@ -375,95 +375,6 @@ button:hover {
     }
 }
 
-/******************************* section footer *********************************/
-
-footer {
-    background: #fff;
-    padding: 40px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    border-top: 2px solid #ddd;
-}
-
-.footer-left {
-    flex: 1;
-  
-    max-width: 300px;
-}
-.footer-left img {
-    margin-top: 3rem;
-    width: 140px;
-}
-
-.footer-left p {
-    font-size: 14px;
-    color: #333;
-    margin-top: 10px;
-}
-
-.footer-left .sociaux {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.footer-left .sociaux img {
-    width: 24px;
-    height: 24px;
-}
-
-.footer-center {
-    flex: 1;
-    max-width: 300px;
-}
-
-.footer-center span{
-    font-weight: bold;
-}
-
-.footer-center h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-.footer-center p {
-    margin: 5px 0;
-}
-
-.footer-center button {
-    background: #556b2f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-    display: block;
-}
-
-.footer-right a {
-    display: block;
-    font-size: 14px;
-    color: #333;
-    text-decoration: none;
-    margin-bottom: 5px;
-    line-height: 2em;
-}
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-left, .footer-center, .footer-right {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-    .footer-center button {
-        margin: auto;
-    }
-}
 
 /************************************ page hotel Feu ***********************************/
 
@@ -545,78 +456,114 @@ footer {
 
 /*************************************** section carousel ******************************/
 
-.car {
+.scroll-section {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 3rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+    margin-left: 20rem;
+    margin-top: 6rem;
+    position: relative;
+  }
+
+
+  .title-carousel {
+    margin-left: 20rem;
     margin-top: 5rem;
-}
+  }
 
-.title-carousel {
-    margin-bottom: 1rem;
-}
-
-.carousel-container {
+  .card {
+    scroll-snap-align: start;
+    min-width: 50%;
+    height: 60vh;
+    color: white;
     position: relative;
-    width: 90%;
-    max-width: 1300px;
+    border-radius: 8px;
     overflow: hidden;
-}
+    flex-shrink: 0;
+    text-align: right;
+  }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    position: relative;
-    flex: 0 0 100%;
-    text-align: center;
-}
-
-.carousel img {
+  .card img {
     width: 100%;
-    height: 400px;
+    height: 60vh;
     object-fit: cover;
-}
 
-.carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 70%;
-    transform: translateX(-50%);
-    padding: 10px;
-    text-align:right;
-    width: 40%;
-}
+  }
 
-.carousel-caption p{
-    color: #FFFFFF;
-}
-
-.carousel-caption h3 {
-    color: white;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  .content button {
     background-color: #4f6234;
+    margin-left: 20rem;
+  }
+
+  .card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    margin-left: 20rem;
+  }
+
+  .card h4 {
+    margin: 0;
     color: white;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    transition: background-color 0.3s ease-in-out;
-}
 
-.left {
-    left: 10px;
-}
+  }
 
-.right {
-    right: 10px;
+  .card p {
+    margin: 0.3rem 0;
+    color: white;
+    margin-left: 9rem;
+
+
+  }
+
+  .card .price {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+
+
+
+  @media (max-width: 1024px) {
+    .scroll-section {
+        margin-left: 0;
+        margin-top: 3rem;
+        gap: 2rem;
+    }
+
+    .title-carousel {
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+
+    .card {
+        min-width: 80%;
+        height: 50vh;
+    }
+
+    .card p {
+        margin-left: 2rem;
+    }
+
+    .content button {
+        margin: 0;
+    }
+
+    .card .content {
+        margin-left: 0;
+    }
+
+    .video-ciel video {
+        height: 60vh;
+    }
 }
 
 /************************** Section video ciel etoile ****************************/
@@ -885,3 +832,7 @@ select {
         margin: 20% auto;
     }
 }
+
+
+
+  

@@ -1,0 +1,91 @@
+/******************************* section footer *********************************/
+
+footer {
+    background: #fff;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 2px solid #ddd;
+}
+
+.footer-left {
+    flex: 1;
+  
+    max-width: 300px;
+}
+.footer-left img {
+    margin-top: 3rem;
+    width: 140px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.footer-left .sociaux {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-left .sociaux img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-center {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-center span{
+    font-weight: bold;
+}
+
+.footer-center h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-center p {
+    margin: 5px 0;
+}
+
+.footer-center button {
+    background: #556b2f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+.footer-right a {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    line-height: 2em;
+}
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-left, .footer-center, .footer-right {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-center button {
+        margin: auto;
+    }
+}
+
+/************************************ page hotel Feu ***********************************/

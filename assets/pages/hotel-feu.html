@@ -27,9 +27,7 @@
                 </ul>
             </div>
             <!-- Bouton burger -->
-            <div class="burger">
-                <i class="fas fa-bars"></i>
-            </div>
+              </div>
             <div class="nav-right">
                 <span class="contact-text">Contact</span>
                 <a href="https://www.instagram.com/" class="contact" target="_blank">
@@ -123,115 +121,106 @@
                 </div>
             </div>
         </section>
-        <section class="car">
-            <div class="carousel-container">
-                <div class="title-carousel">
-                    <h4>Service supplémentaires</h4>
-                    <p>Les services supplémentaires ne sont pas comprises dans le tarif de base de la chambre.</p>
-                </div>
-                <div class="carousel" id="carousel1">
-                    <div class="carousel-item">
-                        <img src="../images/uber.jpg" alt="Voiture Uber en service pour un trajet confortable et rapide">
-                        <div class="carousel-caption">
-                            <h3>Chauffeur</h3>
-                            <p>Explorez la ville en toute sérénité avec notre service de chauffeur exclusif, offert par l'hôtel.</p>
-                            <p>11€ / jour</p>
-                        </div>
+        <section>
+            <div class="title-carousel">
+                <h4>Service supplémentaires</h4>
+                <p>Les services supplémentaires ne sont pas comprises dans le tarif de base de la chambre.</p>
+            </div>
+            <div class="scroll-section">
+                <div class="card">
+                    <img src="../images/uber.jpg" alt="Chauffeur privé de l'hôtel attendant un passager">
+                    <div class="content">
+                        <h4>Chauffeur</h4>
+                        <p>Explorez la ville en toute sérénité avec notre service de chauffeur exclusif offeet par la l'hôtel</p>
+                    <div class="price"> 
+                        11€ / jour
                     </div>
-                    <div class="carousel-item">
-                        <img src="../images/repas.jpg" alt="Repas gourmet préparé pour une expérience culinaire raffinée">
-                        <div class="carousel-caption">
-                            <h3>Profiter d'un bon repas</h3>
-                            <p>Savourez l'art culinaire de notre service de repas, où chaque plat est préparé pour émerveiller vos papilles.</p>
-                            <p>18€ / jour</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/dejeuner.jpg" alt="Petit-déjeuner copieux avec des plats frais et variés">
-                        <div class="carousel-caption">
-                            <h3>Déjeuner</h3>
-                            <p>Commencez votre journée en beauté avec notre service de petit déjeuner raffiné.</p>
-                            <p>15€ / jour </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/chambre-aquarium.jpg" alt="Chambre d'hôtel avec vue sur un aquarium marin impressionnant">
-                        <div class="carousel-caption">
-                            <h3>Chambre aquarium</h3>
-                            <p>Profitez de nos chambre au milieu de centaines de poisson</p>
-                            <p>110€ / jour</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/chambre-grotte.jpg" alt="Chambre d'hôtel située dans une grotte avec un décor naturel et intime">
-                        <div class="carousel-caption">
-                            <h3>Chambre grotte</h3>
-                            <p>profiter d'un moment unique dormir dans une grotte</p>
-                            <p>150€ / jour</p>
-                        </div>
                     </div>
                 </div>
-                <!-- Bouton pour faire défiler le carousel vers la droite -->
-                <button class="carousel-btn right" onclick="scrollCarousel('right', 'carousel1')">&#10095;</button>
+                <div class="card">
+                    <img src="../images/dejeuner.jpg" alt="Un délicieux déjeuner avec des fruits, du pain et une boisson">
+                    <div class="content">
+                        <h4>Déjeuner</h4>
+                        <p>Commencez votre journée en beauté avec notre petit déjeuner raffiné.</p>
+                    <div class="price">
+                        15€ / jour
+                    </div>
+                </div>
+                </div>
+                <div class="card">
+                    <img src="../images/repas.jpg" alt="Plat cuisiné avec des produits frais et locaux">
+                    <div class="content">
+                        <h4>Repas Gourmet</h4>
+                        <p>Savourez un dîner préparé par notre chef primé directement en chambre.</p>
+                        <div class="price">25€ / jour</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/images-supplementaires/cabane-piscine.jpg" alt="Hébergement avec terrasse privée et piscine au bord de la nature">
+                    <div class="content">
+                        <h4>Repas Gourmet</h4>
+                        <p>profitez de nos cabanne sur mer avec magnifique vue</p>
+                        <div class="price">25€ / jour</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/images-supplementaires/bar-grotte.jpg" alt="Bar insolite installé dans une grotte naturelle">
+                    <div class="content">
+                        <h4>Repas Gourmet</h4>
+                        <p>Savourez un verre dans nos grotte vue sur mer avec coucher de soleil</p>
+                        <div class="price">25€ / jour</div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="car">
-            <div class="carousel-container">
-                <div class="title-carousel">
+        <section>
+            <div class="title-carousel">
                 <h4>Activités proches de l’hôtel</h4>
                 <p>Les activités ne sont pas comprises dans le tarif de base de la chambre.</p>
-                </div>
-                <!-- Bouton pour faire défiler le carousel vers la gauche onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
-                <button class="carousel-btn left" onclick="scrollCarousel('left', 'carousel2')">&#10094;</button>
-                <div class="carousel" id="carousel2">
-                    <div class="carousel-item">
-                        <img src="../images/chien-traineaux.jpg" alt="Chien de traîneau en action sur la neige, tirant un traîneau">
-                        <div class="carousel-caption">
-                            <h3>Chien de traineaux</h3>
-                            <p>Plongez dans une aventure hivernale palpitante en explorant la beauté des paysages enneigés lors d'une excursion magique.</p>
-                            <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
-                            <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/images-supplementaires/grotte-mer.JPEG" alt="Vue d'une grotte située près de la mer avec des eaux cristallines et des formations rocheuses">
-                        <div class="carousel-caption">
-                            <h3>Coucher du soleil</h3>
-                            <p>Parcourez des sentiers immaculés et découvrez la tranquillité hivernale tout en profitant d'une randonnée en raquettes.</p>
-                            <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
-                            <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/rando-raquette.jpg" alt="Randonneurs marchant avec des raquettes sur neige dans un paysage montagneux">
-                        <div class="carousel-caption">
-                            <h3>Patin</h3>
-                            <p>Parcourez des sentiers immaculés et découvrez la tranquillité hivernale tout en profitant d'une randonnée en raquettes.</p>
-                            <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée-->
-                            <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/volcan.png" alt="Vue d'un volcan en éruption avec de la lave jaillissant de son cratère">
-                        <div class="carousel-caption">
-                            <h3>Vue sur colinne</h3>
-                            <p>Parcourez des sentiers immaculés et découvrez la tranquillité des colinnes tout en profitant de l'air de montagne.</p>
-                            <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée -->
-                            <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/guide.jpg" alt="Portrait d'un guide touristique en pleine nature, accompagné de voyageurs">
-                        <div class="carousel-caption">
-                            <h3>Apprenez à vous guider</h3>
-                            <p>Apprenez a vous guider en forêt pour ne jamais vous perdre</p>
-                            <!-- Bouton de réservation redirigeant vers la page du formulaire onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée -->
-                            <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
-                        </div>
+            </div>
+            <div class="scroll-section">
+                <div class="card">
+                    <img src="../images/chien-traineaux.jpg" alt="Balade en traîneau tiré par des chiens huskies dans la neige">
+                    <div class="content">
+                        <h4>Chien de traineaux</h4>
+                        <p>Plongez dans une aventure hivernale palpitante en explorant la beauté des paysages enneigés lors d'une excursion magique.</p>
+                        <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
                     </div>
                 </div>
-                <!-- Bouton pour faire défiler le carousel vers la droite onclick contient du JavaScript qui définit ce qui se passe lorsque l'utilisateur clique sur le bouton. Dans ce cas, il redirige l'utilisateur vers la page spécifiée -->
-                <button class="carousel-btn right" onclick="scrollCarousel('right', 'carousel2')">&#10095;</button>
+                <div class="card">
+                    <img src="../images/rando-raquette.jpg" alt="Randonnée en raquettes dans un paysage enneigé">
+                    <div class="content">
+                        <h4>Rando en raquette</h4>
+                        <p>
+                            Parcourez des sentiers immaculés et découvrez la tranquillité hivernale tout en profitant d'une randonnée en raquettes.
+                        </p>
+                        <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/volcan.png" alt="Vue spectaculaire sur un volcan en éruption">
+                    <div class="content">
+                        <h4>Volcan en éruption</h4>
+                        <p>Explorez le monde fascinant des volcans, plongez au cœur de paysages spectaculaires et laissez-vous émerveiller.</p>
+                        <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/images-supplementaires/igloo-en-toile.jpg" alt="Séjour insolite dans un igloo en toile sous les étoiles">
+                    <div class="content">
+                        <h4>Repas Gourmet</h4>
+                        <p>profitez de nos cabanne sur mer avec magnifique vue</p>
+                        <button type="button" class="btn-primary" onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../images/images-supplementaires/relaxe-bord-plage.png" alt="Moment de détente sur une chaise longue face à la mer">
+                    <div class="content">
+                        <h4>Repas Gourmet</h4>
+                        <p>venez vous reposer en couple ou en famille dans un endroit unique qui offre une vue inique </p>
+                        <button type="button" class="btn-primary " onclick="window.location.href='../pages/formulaire.html'">Reserver</button>
+                    </div>
+                </div>
             </div>
         </section>
         <section>

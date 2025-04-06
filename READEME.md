@@ -24,9 +24,9 @@ Lightbox pour les images
 
 HTML5 sémantique
 
-CSS3 modulaire (Sass préprocesseur)
+CSS3 modulaire
 
-JavaScript vanilla
+JavaScript 
 
 Git pour le versionnage
 
@@ -69,7 +69,7 @@ Blanc cassé (#F8F9FA)
 - Validation
 Le code respecte les standards :
 
-SEO (balises meta, alt, title)
+SEO (balises, alt, title)
 
 Accessibilité (ARIA, contrastes)
 

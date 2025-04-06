@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../header/header.css">
     <link rel="stylesheet" href="../components/button/primary-button.css">
+    <link rel="stylesheet" href="../footer/footer.css">
     <link rel="icon" href="../../hotel.png" type="image/x-icon"> <!-- Favicon au format ICO -->
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="../../hotel.png">
+                <a href="../../index.html">
                     <img src="../images/logo-header.png" alt="Logo représentant les 4 éléments de l'hôtel">
                 </a>
                 <ul class="menu">
@@ -160,7 +161,6 @@
                                 <option value="vegan">Végan</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
                             <label>Restrictions alimentaires</label>
                             <div class="checkbox-group">
@@ -178,11 +178,9 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="form-group checkbox-group">
                     <input type="checkbox" id="meal" name="meal" value="25">
                     <label for="meal">Repas (25€/personne/repas)</label>
-                    
                     <div id="mealOptions" class="options-container" style="display: none;">
                         <div class="form-group">
                             <label for="mealType">Type de repas</label>
@@ -192,7 +190,6 @@
                                 <option value="ponctuel">Ponctuel (payé sur place)</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
                             <label for="mealDiet">Régime alimentaire</label>
                             <select id="mealDiet" name="mealDiet">
@@ -200,8 +197,7 @@
                                 <option value="vegetarian">Végétarien</option>
                                 <option value="vegan">Végan</option>
                             </select>
-                        </div>
-                        
+                        </div>    
                         <div class="form-group">
                             <label>Restrictions alimentaires</label>
                             <div class="checkbox-group">
@@ -219,17 +215,14 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="form-group checkbox-group">
                     <input type="checkbox" id="tour" name="tour" value="20">
                     <label for="tour">Visite guidée du domaine (20€)</label>
                 </div>
-            </fieldset>
-            
+            </fieldset> 
             <button type="submit" class="submit-btn">Valider la réservation</button>
         </form>
     </div>
-    
     <!-- Modal de confirmation -->
     <div id="confirmationModal" class="modal">
         <div class="modal-content">

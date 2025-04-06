@@ -151,29 +151,76 @@ body.dark-mode span {
     display: none;
 }
 
+/* MENU BURGER */
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Version desktop par défaut */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 /* Version mobile */
 @media (max-width: 768px) {
-    .desktop-nav {
+
+    .logo{
         display: none;
     }
-    
-    .mobile-nav {
-        display: flex;
-        align-items: center;
-        gap: 20px;
+
+    .login{
+        display: none;
     }
-    
-    .social-icons {
+
+    .contact-text{
+        display: none;
+    }
+
+    .btn-header{
+        display: none;
+    }
+
+    .menu {
+        display: none; /* Cacher le menu sur mobile */
+        position: absolute;
+        top: 60px; /* Positionner le menu juste sous la barre de navigation */
+        right: 0;
+        background-color: #e6e4df;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .nav-right button{
+        display: none; /* Masquer les liens sociaux en version mobile */
+    }
+
+    .burger {
+        display: block; /* Afficher le menu burger sur mobile */
+    }
+
+    /* Afficher le menu quand il est activé */
+    .menu.active {
+        display: flex;
+    }
+}
+
+/* Affichage des liens sociaux sur mobile */
+@media (max-width: 768px) {
+    .nav-right {
         display: flex;
         gap: 15px;
-    }
-    
-    .burger {
-        cursor: pointer;
-    }
-    
-    .burger img {
-        width: 24px;
-        height: 24px;
     }
 }

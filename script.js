@@ -13,52 +13,47 @@ function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 
+
 /////////////////////////////////////////////////////////////////////////////////////////// code carousel ////////////////////////////////////////////////////////////////////////////////////////
 
-// Déclaration de deux variables pour garder en mémoire la position actuelle de chaque carrousel
-let index1 = 0; // Position actuelle du premier carrousel (commence à 0)
-let index2 = 0; // Position actuelle du deuxième carrousel (commence à 0)
+// Sélectionner toutes les images dans les cartes de la section de défilement
+const images = document.querySelectorAll('.scroll-section .card img');
 
-// Fonction pour faire défiler le carrousel dans une direction donnée
-function scrollCarousel(direction, carouselId) {
-    // Récupère l'élément du carrousel dans le HTML grâce à son ID
-    const carousel = document.getElementById(carouselId);
-    
-    // Récupère tous les éléments (images/contenus) à l'intérieur du carrousel
-    const items = carousel.querySelectorAll('.carousel-item');
-    
-    // Calcule le nombre total d'éléments dans le carrousel
-    const totalItems = items.length;
+// Ajouter un événement 'click' sur chaque image
+images.forEach(function (img) {
+    img.addEventListener('click', function () {
+        // Trouve la section contenant les cartes
+        const section = img.closest('.scroll-section');
+        
+        // Récupère la largeur d'une carte
+        const cardWidth = section.querySelector('.card').offsetWidth;
 
-    // Déclare une variable pour stocker l'index courant
-    let index;
-    
-    // Vérifie quel carrousel est utilisé et prend l'index correspondant
-    if (carouselId === 'carousel1') {
-        index = index1; // Utilise l'index du premier carrousel
-    } else if (carouselId === 'carousel2') {
-        index = index2; // Utilise l'index du deuxième carrousel
-    }
+        // Récupère la largeur totale de la section
+        const sectionWidth = section.scrollWidth;
 
-    // Gestion de la direction du défilement
-    if (direction === 'left') {
-        // Si on va à gauche, on décrémente l'index ou on revient à la fin si on est au début
-        index = (index > 0) ? index - 1 : totalItems - 1;
-    } else {
-        // Si on va à droite, on incrémente l'index ou on revient au début si on est à la fin
-        index = (index < totalItems - 1) ? index + 1 : 0;
-    }
+        // Récupère la largeur visible de la section
+        const sectionVisibleWidth = section.offsetWidth;
 
-    // Met à jour l'index du bon carrousel après le défilement
-    if (carouselId === 'carousel1') {
-        index1 = index; // Sauvegarde la nouvelle position pour le premier carrousel
-    } else if (carouselId === 'carousel2') {
-        index2 = index; // Sauvegarde la nouvelle position pour le deuxième carrousel
-    }
+        // Récupère la position actuelle du défilement
+        const scrollPosition = section.scrollLeft;
 
-    // Applique l'animation de défilement en déplaçant le carrousel horizontalement
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-}
+        // Si on est à la fin de la section (ou presque), revenir au début
+        if (scrollPosition + sectionVisibleWidth >= sectionWidth) {
+            section.scrollTo({
+                left: 0, // Revenir au début
+                behavior: 'smooth' // Défilement fluide
+            });
+        } else {
+            // Sinon, faire défiler vers la droite de la largeur d'une carte
+            section.scrollBy({
+                left: cardWidth, // On défile vers la droite
+                behavior: 'smooth' // Défilement fluide
+            });
+        }
+    });
+});
+
+/// j'ai un tracKpad tactile il me fait défiler le scroll lorsque je fait défiler mon doigt dessus de gauche à droite
 
 ////////////////////////////////////////////////////////////////////////////////// FORMULAIRE ///////////////////////////////////////////////////////////////////////////////
 
