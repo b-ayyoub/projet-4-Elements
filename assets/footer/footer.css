@@ -74,7 +74,7 @@ footer {
     margin-bottom: 5px;
     line-height: 2em;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     footer {
         flex-direction: column;
         text-align: center;
